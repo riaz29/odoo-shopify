@@ -1,0 +1,85 @@
+<odoo>
+  <data>
+    <!-- Credentials list view definition -->
+
+    <record model="ir.ui.view" id="track_info_list">
+      <field name="name">Track Info</field>
+      <field name="model">shopify.track_info</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/> 
+          <field name="created_by"/>
+          <field name="tracking_number"/>
+          <field name="pod" optional="hide"/>
+          <field name="provider_site" optional="hide"/>
+
+          <field name="provider_telephone" optional="hide"/> 
+          <field name="package_state" optional="hide"/>
+          <field name="interval_days" optional="hide"/>
+          <field name="tracking_status"/>
+
+          <field name="waybill_number"/> 
+          <field name="provider_name" optional="hide"/>
+          <field name="country_code" optional="hide"/>
+          <field name="message" optional="hide"/>
+          <field name="order_tracking_status"/>
+
+          <field name="track_code_description"/> 
+          <field name="abnormal_reasons_code" optional="hide"/>
+          <field name="abnormal_reason" optional="hide"/>
+          <field name="process_location" optional="hide"/>
+          <field name="process_province" optional="hide"/>
+
+          <field name="process_content"/> 
+          <field name="process_date" optional="hide"/>
+          <field name="process_country" optional="hide"/>
+          <field name="process_city" optional="hide"/>
+          <field name="process_code" optional="hide"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="track_info_form_view">
+            <field name="name">Track Info Form</field>
+            <field name="model">shopify.track_info</field>
+            <field name="arch" type="xml">
+                <form string="Form View">
+                    <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/> 
+                            <field name="created_by"/>
+                            <field name="tracking_number"/>
+                            <field name="pod"/>
+                            <field name="provider_site"/>
+                            <field name="provider_telephone"/> 
+                            <field name="package_state"/>
+                            <field name="interval_days" />
+                            <field name="tracking_status"/>
+                            <field name="waybill_number"/> 
+                            <field name="provider_name"/>
+                            <field name="country_code"/>                  
+                        </group>
+                        <group>
+                            <field name="message" />
+                            <field name="order_tracking_status"/>
+                            <field name="track_code_description"/> 
+                            <field name="abnormal_reasons_code" />
+                            <field name="abnormal_reason" />
+                            <field name="process_location" />
+                            <field name="process_province"/>
+                            <field name="process_content"/> 
+                            <field name="process_date" />
+                            <field name="process_country" />
+                            <field name="process_city" />
+                            <field name="process_code" />
+                        </group>
+                    </group>
+                    </sheet>   
+                </form>
+            </field>
+    </record>
+
+
+</data>
+</odoo>

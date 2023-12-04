@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <!-- <template id="fonts" name="telfoni font" inherit_id="web.layout">
+        <xpath expr="//link[last()]" position="after">
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;family=Questrial&amp;display=swap" rel="stylesheet"/>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </xpath>
+</template> -->
+
+
+<!--<template id="shopify_assets_frontend" name="my_shopify_assets_frontend" inherit_id="website.assets_frontend">
+    <xpath expr="link[last()]" position="inside">
+        <link rel="stylesheet" type="text/css" href="/shopify/static/style.css"/>
+        <link rel="stylesheet" type="text/css" href="/shopify/static/style2.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"/>
+        <script src="/shopify/static/my_script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.7.2/css/all.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    </xpath>
+</template>-->
+   <template id="form_template">
+    <link rel="stylesheet" type="text/css" href="/shopify/static/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/shopify/static/my_script.js"></script>
+    <script src="/shopify/static/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;family=Questrial&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="/shopify/static/style.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="/shopify/static/bootstrap.min.css"/> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"/> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.7.2/css/all.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+       <t t-call="website.layout">
+       <style>
+        .dracoslides_font {
+            font-family : "Centaur";
+            color : rgb(32,32,32);
+            font-size : 19px;
+            font-weight : 500;
+            letter-spacing: 0.5px;
+        }
+       </style>
+        <br/>
+           <div id="wrap" class="oe_structure oe_empty">
+               <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                   <div class="container">
+                       <form action="/user_data/submit/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="" data-success-mode="redirect" data-success-page="/contactus-thank-you">
+                           <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                           <div class="s_website_form_rows row s_col_no_bgcolor">
+
+                               <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                   <div class="row s_col_no_resize s_col_no_bgcolor">
+                                       <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="studio1">
+                                           <span class="s_website_form_label_content dracoslides_font">Name</span>
+                                           <span class="s_website_form_mark"> *</span>
+                                       </label>
+                                       <div class="col-sm">
+                                       <input id="name" type="text" class="form-control s_website_form_input" name="name" required="1"/>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                   <div class="row s_col_no_resize s_col_no_bgcolor">
+                                       <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="studio1">
+                                           <span class="s_website_form_label_content dracoslides_font">Number</span>
+                                           <span class="s_website_form_mark"> *</span>
+                                       </label>
+                                       <div class="col-sm">
+                                       <input id="number" type="number" class="form-control s_website_form_input" name="number" required="1"/>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                   <div class="row s_col_no_resize s_col_no_bgcolor">
+                                       <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="studio1">
+                                           <span class="s_website_form_label_content dracoslides_font">Street</span>
+                                           <span class="s_website_form_mark"> *</span>
+                                       </label>
+                                       <div class="col-sm">
+                                       <input id="streat" type="text" class="form-control s_website_form_input" name="streat" required="1"/>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                   <div class="row s_col_no_resize s_col_no_bgcolor">
+                                       <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="studio1">
+                                           <span class="s_website_form_label_content dracoslides_font">Country</span>
+                                           <span class="s_website_form_mark"> *</span>
+                                       </label>
+                                       <div class="col-sm">
+                                       <!-- <input id="city" type="text" class="form-control s_website_form_input" name="city" required="1"/> -->
+                                         <select class="form-select" name="country">
+                                            <option value="" class="dracoslides_font"><span class="dracoslides_font">Select an Country</span></option>
+                                            <t t-foreach="countries" t-as="country">
+                                                <option t-att-value="country.id" class="dracoslides_font"><t t-esc="country.name"  class="dracoslides_font"/></option>
+                                            </t>
+                                        </select>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                                   <div class="row s_col_no_resize s_col_no_bgcolor">
+                                       <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="studio1">
+                                           <span class="s_website_form_label_content dracoslides_font">City</span>
+                                           <span class="s_website_form_mark"> *</span>
+                                       </label>
+                                       <div class="col-sm">
+                                       <!-- <input id="country" type="text" class="form-control s_website_form_input" name="country" required="1"/> -->
+                                       <select class="form-select" name="city">
+                                            <option value="" class="dracoslides_font"><span class="dracoslides_font">Select an City</span></option>
+                                            <t t-foreach="states" t-as="state">
+                                                <option t-att-value="state.id" class="dracoslides_font"><t t-esc="state.name"  class="dracoslides_font"/></option>
+                                            </t>
+                                        </select>
+                                       </div>
+                                   </div>
+                               </div>
+                               <br/>
+                                <br/>
+                            <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="bbb_viewed_title_container">
+                                                    <h3 class="bbb_viewed_title dracoslides_font_heading">Available Product</h3>
+
+                                                </div>
+                                                <div class="bbb_viewed_slider_container">
+                                                    <div class="owl-carousel owl-theme bbb_viewed_slider">
+                                                    <t t-foreach="website_product_ids" t-as="website_product_id">
+                                                        <div class="owl-item">
+                                                            <div class="oe_product_image">
+                                                                    <center>
+                                                                        <div style="width:100%; height:160px;overflow: hidden;">
+                                                                                <img t-attf-src="data:image/*;base64,{{website_product_id.image_1920}}"
+                                                                                class="img oe_product_image"
+                                                                                style="padding: 2px; margin: 2px; width:auto; height:100%;"
+                                                                                />
+                                                                        </div>
+                                                                        <div style="text-align: center ;margin: 10px 15px 3px 15px;">
+                                                                            <t t-if="website_product_id.name">
+                                                                                <span id="productName" class="dracoslides_font" t-esc="website_product_id.name"
+                                                                                        style="font-weight: bolder;color: #3e3b3b;"/>
+                                                                                <br/>
+                                                                            </t>
+                                                                        </div>
+                                                                        <div style="text-align: center;margin: 10px 15px 3px 15px;">
+                                                                            <t t-if="website_product_id.list_price">
+                                                                                <span t-esc="website_product_id.list_price" class="dracoslides_font"
+                                                                                        style="font-weight: bolder;color: #3e3b3b;"/>
+                                                                                <br/>
+                                                                            </t>
+                                                                        </div>
+
+                                                                        <div style="text-align: center;margin: 10px 15px 3px 15px;">
+                                                                            <t t-if="website_product_id.description">
+                                                                                <p t-esc="website_product_id.description[:50]" class="dracoslides_font"
+                                                                                        style="font-weight: lighter;color: #3e3b3b;">
+                                                                                </p>
+                                                                                    <!-- <a href="#" class="read-more-btn dracoslides_font" data-toggle="modal" data-target="#myModal" t-att-data-text="website_product_id.description">Read More</a> -->
+                                                                                    <button type="button" class="btn btn-outline-info read-more-btn dracoslides_font" data-toggle="modal" data-target="#myModal" t-att-data-text="website_product_id.description">Read More</button>
+                                                                                <br/>
+                                                                            </t>
+
+                                                                        </div>
+                                                                        <div style="text-align: center;margin: 10px 15px 3px 15px;">
+                                                                            <!-- Add checkbox for product selection -->
+                                                                            <input type="checkbox" name="selected_products"
+                                                                                t-att-value="website_product_id.shopify_product_id "/>
+                                                                        </div>
+                                                                    </center>
+                                                                </div>
+                                                        </div>
+                                                    </t>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <div class="row">
+                                              <div class="bbb_viewed_nav_container">
+                                                        <div class="bbb_viewed_nav bbb_viewed_prev"><i class='fas fa-angle-left' style='font-size:48px;color:black'></i></div>
+                                                        <div class="bbb_viewed_nav bbb_viewed_next"><i class='fas fa-angle-right' style='font-size:48px;color:black'></i></div>
+                                                    </div>
+                                        </div>
+                                    </div>
+                                <br/>
+                                <br/>
+                            <button type="submit" class="text-center btn btn-primary btn-block dracoslides_font"><h4>Register</h4></button>
+                               <!-- <div class="form-group col-12 s_website_form_submit text-center" data-name="Submit Button">
+                                  
+                                        <button type="submit" class="text-center btn btn-primary btn-block dracoslides_font"><h4>Register</h4></button>
+                                </div> -->
+                           </div>
+                       </form>
+                   </div>
+               </section>
+           </div>
+
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="myModalLabel">Dynamic Text</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="modalText" class="dracoslides_font"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+        <script>
+            $(document).ready(function() {
+                $('.read-more-btn').click(function(event) {
+                    event.preventDefault();
+                    var encodedText = $(this).data('text');
+                    var decodedText = $("<div/>").html(encodedText).text();
+                    $('#modalText').text(decodedText);
+                });
+            });
+        </script>
+        <script>
+
+            $(document).ready(function()
+            {
+
+
+            if($('.bbb_viewed_slider').length)
+            {
+                var viewedSlider = $('.bbb_viewed_slider');
+
+                viewedSlider.owlCarousel(
+                {
+                    margin:30,
+                    nav:false,
+                    dots:false,
+                    responsive:
+                    {
+                        0:{items:1},
+                        575:{items:2},
+                        768:{items:3},
+                        991:{items:4},
+
+                    }
+                });
+
+                if($('.bbb_viewed_prev').length)
+                {
+                    var prev = $('.bbb_viewed_prev');
+                    prev.on('click', function()
+                    {
+                        viewedSlider.trigger('prev.owl.carousel');
+                    });
+                }
+
+                if($('.bbb_viewed_next').length)
+                {
+                    var next = $('.bbb_viewed_next');
+                    next.on('click', function()
+                    {
+                        viewedSlider.trigger('next.owl.carousel');
+                    });
+                }
+            }
+
+
+        });
+    </script>
+
+    </t>
+   </template>
+
+    <template id="my_page" inherit_id="website.layout">
+        <xpath expr="//header" position="replace">
+
+        </xpath>
+        <xpath expr="//footer" position="replace">
+
+        </xpath>
+    </template>
+</odoo>

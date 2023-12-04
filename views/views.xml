@@ -1,0 +1,313 @@
+<odoo>
+  <data>
+    <!-- Credentials list view definition -->
+
+    <record model="ir.ui.view" id="shopify_order_list">
+      <field name="name">Shopify Order</field>
+      <field name="model">shopify.shopify_order</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="order_name"/>
+          <field name="order_create"/>
+          <field name="order_status"/>
+        </tree>
+      </field>
+    </record>
+
+    
+    <record model="ir.ui.view" id="shopify_order_form_view">
+            <field name="name">Shopify Orders</field>
+            <field name="model">shopify.shopify_order</field>
+            <field name="arch" type="xml">
+                <form string="Form View">
+                <header>
+                        <button name="add_order" string="Create Order" create="false" type="object" class="oe_highlight"/>
+                        <button name="get_product" string="Get Product" create="false" type="object" class="oe_highlight"/>
+                        <button name="get_track_info" string="Get Track Info" type="object" class="oe_highlight"/>
+                        <!-- <button name="get_shopify_track_info" string="Get Shopify Track Info" type="object" class="oe_highlight"/> -->
+                        <button name="run_campagin" string="Run Campaign" type="object" class="oe_highlight"/>
+                        
+                        
+                  </header>
+                    <sheet>
+                        <group>
+                            <field name="order_name"/>
+                        </group>
+                         <notebook>
+                            <page string="Tracking Info">
+                                <field name="track_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/> 
+                                        <field name="created_by" optional="hide"/>
+                                        <field name="tracking_number" />
+                                        <field name="pod" optional="hide"/>
+                                        <field name="provider_site" optional="hide"/>
+
+                                        <field name="provider_telephone" optional="hide"/> 
+                                        <field name="package_state" optional="hide"/>
+                                        <field name="interval_days" optional="hide"/>
+                                        <field name="tracking_status"/>
+
+                                        <field name="waybill_number"/> 
+                                        <field name="provider_name" optional="hide"/>
+                                        <field name="country_code" optional="hide"/>
+                                        <field name="message" optional="hide"/>
+                                        <field name="order_tracking_status"/>
+
+                                        <field name="track_code_description"/> 
+                                        <field name="abnormal_reasons_code" optional="hide"/>
+                                        <field name="abnormal_reason" optional="hide"/>
+                                        <field name="process_location" optional="hide"/>
+                                        <field name="process_province" optional="hide"/>
+
+                                        <field name="process_content"/> 
+                                        <field name="process_date" optional="hide"/>
+                                        <field name="process_country" optional="hide"/>
+                                        <field name="process_city" optional="hide"/>
+                                        <field name="process_code" optional="hide"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="shopify_get_product_list">
+      <field name="name">Product Template</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_tree_view"/>
+      <field name="arch" type="xml">
+          <xpath expr="//field[@name='name']" position="after">
+            <field name="shopify_product_id"/>
+          </xpath>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="google_sheet_list">
+      <field name="name">Google Sheet</field>
+      <field name="model">shopify.google_sheet</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="sheet_record_id"/>
+          <field name="klaviyo_id"/>
+          <field name="channel_name"/>
+          <field name="channel_url"/>
+          <field name="follower_count"/>
+          <field name="name"/>
+          <field name="outreach_sent"/>
+          <field name="searching_keyword"/>
+          <field name="category"/>
+          <!-- <field name="yes_no"/> -->
+          
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="google_sheet_form_view">
+            <field name="name">Google Sheet</field>
+            <field name="model">shopify.google_sheet</field>
+            <field name="arch" type="xml">
+                <form string="Google Sheet">
+                <header>
+                        <button name="import_sheet" string="Import Sheet" type="object" class="oe_highlight"/>
+                        <button name="compaign_send_outreach" string="Compaign Start" type="object" class="oe_highlight"/>
+                        <button name="custom_profile_fields" string="Custom Field" type="object" class="oe_highlight"/>
+                        
+                        <!-- <button name="compaignStart" string="Compaign Start" type="object" class="oe_highlight"/> -->
+                  </header>
+                    <sheet>
+                        <group>
+                            <field name="sheet_record_id"/>
+                            <field name="channel_name"/>
+                            <field name="channel_url" widget="url" />
+                            <field name="follower_count"/>
+                        </group>
+                        <group>
+                            <field name="name"/>
+                            <field name="searching_keyword"/>
+                            <field name="category"/>
+                            <field name="yes_no"/>
+                            <field name="outreach_sent"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="klaviyo_keys_list">
+      <field name="name">klaviyo keys</field>
+      <field name="model">shopify.klaviyo_keys</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="account_name"/>
+          <field name="public_key"/>
+          <field name="private_key"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="klaviyo_keys_form_view">
+            <field name="name">klaviyo keys</field>
+            <field name="model">shopify.klaviyo_keys</field>
+            <field name="arch" type="xml">
+                <form string="Form View">
+                    <sheet>
+                        <group>
+                            <field name="account_name"/>
+                             <field name="public_key"/>
+                             <field name="private_key"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+    <record model="ir.ui.view" id="klaviyo_compaign_list">
+      <field name="name">klaviyo keys</field>
+      <field name="model">shopify.klaviyo_campaign</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="audiance_list_id" invisible="1"/>
+          <field name="compaign_id"/>
+          <field name="compaign_status"/>
+          <field name="message_label"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="klaviyo_keys_form_view">
+            <field name="name">Campaign</field>
+            <field name="model">shopify.klaviyo_campaign</field>
+            <field name="arch" type="xml">
+                <form string="Form View">
+                <header>
+                        <button name="compaignStart" string="Start Campaign" type="object" class="oe_highlight"/>
+                        <button name="updateStatus" string="Get Status" type="object" />
+                  </header>
+                    <sheet>
+                        <group>
+                          <group>
+                            <field name="name"/>
+                            <field name="audiance_list_id" widget="many2many_tags"/>
+                          </group>
+                          <group>
+                            <field name="message_label"/>
+                            <field name="message_subject"/>
+                          </group>
+                            <field name="message_text"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="klaviyo_campaign_template_list">
+      <field name="name">klaviyo Campaign Template</field>
+      <field name="model">shopify.klaviyo_campaign_template</field>
+      <field name="arch" type="xml">
+        <tree>
+          <!-- <field name="campaign_name"/>
+          <field name="compaign_id"/>
+          <field name="compaign_status"/>
+          <field name="message_label"/>
+          <field name="message_subject"/>
+          <field name="campaign_type"/> -->
+          <field name="template_name"/>
+          <field name="template_id"/>
+          <field name="template_type"/>
+          <field name="sent_count"/>
+          
+        </tree>
+      </field>
+    </record>
+
+     <record model="ir.ui.view" id="klaviyo_campaign_template_form_view">
+            <field name="name">Campaign Template</field>
+            <field name="model">shopify.klaviyo_campaign_template</field>
+            <field name="arch" type="xml">
+                <form string="Form View">
+                 <header>
+                        <button name="import_template" string="Import Template" type="object" class="oe_highlight"/>
+                  </header>
+                    <sheet>
+                          <group>
+                            <!-- <field name="campaign_name"/>
+                            <field name="message_label"/>
+                            <field name="message_subject"/>
+                            <field name="campaign_type"/>
+                            <field name="preview_text"/> -->
+                            <field name="template_name"/>
+                            <field name="template_id"/>
+                            <field name="template_type"/>
+                            
+                          </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+
+    <!-- Compaign list view definition -->
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="main_shopify_order_action">
+      <field name="name">shopify order</field>
+      <field name="res_model">shopify.shopify_order</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="main_klaviyo_keys_action">
+      <field name="name">klaviyo Crendentials</field>
+      <field name="res_model">shopify.klaviyo_keys</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+     <record model="ir.actions.act_window" id="main_klaviyo_compaign_action">
+      <field name="name">klaviyo Compaign</field>
+      <field name="res_model">shopify.klaviyo_campaign</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="main_klaviyo_compaign_template_action">
+      <field name="name">klaviyo Compaign Template</field>
+      <field name="res_model">shopify.klaviyo_campaign_template</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="main_google_sheet_action">
+      <field name="name">Google Sheet</field>
+      <field name="res_model">shopify.google_sheet</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="main_track_info_action">
+      <field name="name">Track Info</field>
+      <field name="res_model">shopify.track_info</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+  <menuitem name="Influencer" id="main_shopify_menu"/>
+  <menuitem name="Klaviyo" id="main_klaviyo" parent="main_shopify_menu"/>
+  <menuitem name="Shopify" id="main_influ_shopify" parent="main_shopify_menu"/>
+  <menuitem name="Google Sheets" id="main_influ_gsheets" parent="main_shopify_menu"/>
+
+  <menuitem name="Orders" id="order" parent="main_influ_shopify"
+              action="main_shopify_order_action"/>
+  <menuitem name="Klaviyo Keys" id="keys" parent="main_klaviyo"
+              action="main_klaviyo_keys_action"/>
+  <menuitem name="Compaign Klaviyo" id="compaign" parent="main_klaviyo"
+              action="main_klaviyo_compaign_action"/>
+  <menuitem name="Compaign Klaviyo Template" id="compaignTemplate" parent="main_klaviyo"
+  action="main_klaviyo_compaign_template_action"/>
+  <menuitem name="Google Sheet" id="google_sheet" parent="main_influ_gsheets"
+              action="main_google_sheet_action"/>
+  <menuitem name="Track Info" id="track_info" parent="main_shopify_menu"
+              action="main_track_info_action"/>
+  </data>
+</odoo>

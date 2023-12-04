@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+    <!-- Credentials list view definition -->
+
+    <record model="ir.ui.view" id="influencer_config_list">
+      <field name="name">Config</field>
+      <field name="model">influencer.config</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="influencer_config_list">
+      <field name="name">Config</field>
+      <field name="model">influencer.config</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <group>
+              <field name="name"/>
+              <field name="gsheet_id"/>
+              <field name="gsheet_key"/>
+            </group>
+            <group>
+              <field name="klaviyo_authorization"/>
+              <field name="shopify_access_token"/>
+            </group>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_influencer_config">
+      <field name="name">Config</field>
+      <field name="res_model">influencer.config</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Config" id="menu_influencer_config" parent="main_shopify_menu"
+                action="action_influencer_config"/>
+  </data>
+</odoo>

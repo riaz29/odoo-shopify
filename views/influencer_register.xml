@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+        <record model="ir.ui.view" id="user_data_list">
+          <field name="name">user_data list</field>
+          <field name="model">shopify.user_data</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="user_number"/>
+              <field name="user_streat"/>
+              <field name="user_city"/>
+              <field name="user_country"/>
+              <field name="shopify_product_id"/>
+            </tree>
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="user_data_form_view">
+                <field name="name">user_data Form</field>
+                <field name="model">shopify.user_data</field>
+                <field name="arch" type="xml">
+                    <form string="Form View">
+                        <sheet>
+                            <group>
+                                <field name="name"/>
+                                <field name="user_number"/>
+                                <field name="user_streat"/>
+                                <field name="user_city"/>
+                                <field name="user_country"/>
+                                <field name="shopify_product_id"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="main_user_data_action">
+          <field name="name">user data</field>
+          <field name="res_model">shopify.user_data</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="User Data" id="user_data" parent="main_shopify_menu"
+              action="main_user_data_action"/>
+  </data>
+</odoo>
